@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JSW-GF-HT1">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,37 +17,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-Dv-lAc">
-                                <rect key="frame" x="172.66666666666666" y="391" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="animate" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZz-kR-gi9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hir-ys-fSI">
-                                <rect key="frame" x="160" y="439" width="55" height="30"/>
-                                <state key="normal" title="Remove"/>
-                                <connections>
-                                    <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4MP-mR-5bf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hir-ys-fSI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="CfX-77-MY3"/>
-                            <constraint firstItem="hir-ys-fSI" firstAttribute="top" secondItem="dyI-Dv-lAc" secondAttribute="bottom" constant="18" id="HbI-IQ-ktW"/>
-                            <constraint firstItem="dyI-Dv-lAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XKX-jM-rP0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hir-ys-fSI" secondAttribute="bottom" constant="309" id="mZN-UY-MTI"/>
-                            <constraint firstItem="dyI-Dv-lAc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qVs-bj-6eJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hir-ys-fSI" secondAttribute="trailing" constant="160" id="tcI-un-81c"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.73333333329999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="R45-01-bxo">
+                        <barButtonItem key="leftBarButtonItem" title="SPIN" id="SDn-SK-bM1">
+                            <connections>
+                                <action selector="spinToWin" destination="BYZ-38-t0r" id="eYf-lE-Yfs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Complete" id="0Xk-zD-WuC">
+                            <connections>
+                                <action selector="complete" destination="BYZ-38-t0r" id="lBv-cB-68S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+            <point key="canvasLocation" x="725.5" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="guc-nL-40t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JSW-GF-HT1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zbd-fi-kh0">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hlt-2b-ML7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRF-go-Hjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.5" y="132"/>
         </scene>
     </scenes>
 </document>
